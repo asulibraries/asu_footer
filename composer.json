@@ -1,0 +1,9 @@
+{
+    "name": "asulibraries/asu_footer",
+    "description": "Fork of ASU Footer component and brand assets.",
+    "type": "drupal-module",
+    "license": "MIT",
+   
+    "require": {},
+    "version": "1.0"
+}
