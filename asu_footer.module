@@ -1,31 +1,52 @@
 <?php
 
+/**
+ * @file
+ * Contains asu_footer.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function asu_footer_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the asu_footer module.
+    case 'help.page.asu_footer':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Global footer for ASU web standards') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
 function asu_footer_theme($existing, $type, $theme, $path) {
+  $templates = $path . '/templates';
   return [
-    'asu_footer__footer_block' => [
+    'asu_footer_block' => [
+      'template' => 'asu-footer-block',
       'variables' => [
-        'src_unit_logo' => NULL,
-        'src_unit_logo_width' => NULL,
-        'src_unit_logo_height' => NULL,
-        'unit_custom_logo' => NULL,
-        'unit_custom_logo_link' => NULL,
-        'src_footer_img' => NULL,
-        'src_footer_img_width' => NULL,
-        'src_footer_img_height' => NULL,
-        'show_logo_social_media' => NULL,
-        'facebook_url' => NULL,
-        'twitter_url' => NULL,
-        'linkedin_url' => NULL,
-        'instagram_ulr' => NULL,
-        'youtube_url' => NULL,
-        'show_columns' => NULL,
-        'unit_name' => NULL,
-        'columns_data' => NULL,
-        'link_title' => NULL,
-        'link_url' => NULL,
-        'cta_title' => NULL,
-        'cta_url' => NULL,
+          'module_path' => NULL,
       ],
-    ]
+    ],
   ];
+}
+
+
+/**
+ * Implements hook_preprocess_*()
+ * Pass the module path as a variable
+ */
+function asu_footer_preprocess_asu_footer_block(&$variables, $hook) {
+  $module_handler = Drupal::service('module_handler');
+  $path = $module_handler->getModule('asu_footer')->getPath();
+
+  $variables['module_path'] = $path;
 }

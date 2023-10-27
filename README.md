@@ -2,7 +2,7 @@
 
 ## Description 
 
-The ASU Footer module provides a custom block plugin specific for the ASU Footer.
+The ASU Footer module provides a custom block to display the ASU global footer only.
 
 ## Requirements
 
@@ -22,6 +22,5 @@ Drupal 8.x., Drupal 9.x, Drupal 10.x
 
 To configure the block, you will have to go to the Block section for your 
 current theme admin/structure/block and configure the "ASU footer" block.
-In order to add custom menus, you can do that in the Menu section: admin/structure/menu.
 
 

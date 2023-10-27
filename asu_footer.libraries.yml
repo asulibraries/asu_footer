@@ -1,6 +1,5 @@
-footer-block:
-  version: 0.0.1
-  dependencies:
-    - core/jquery
-  js:
-    js/footer-block.js: {}
+footer:
+  version: 1.x
+  css:
+    component:
+      css/asu-header-footer.css: {}
