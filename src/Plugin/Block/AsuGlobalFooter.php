@@ -13,7 +13,7 @@ use Drupal\Core\Block\BlockBase;
  *   category = @Translation("ASU"),
  * )
  */
-class GlobalFooter extends BlockBase {
+class AsuGlobalFooter extends BlockBase {
 
   /**
    * {@inheritdoc}
