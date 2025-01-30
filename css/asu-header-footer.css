@@ -45,8 +45,8 @@
    Overriding until/unless it's needed.
  */
 body.dropdown-pinned {
-  overflow: auto;
-  position: initial;
+    overflow: auto;
+    position: initial;
 }
 
 /*--------------------------------------------------------------
@@ -336,31 +336,31 @@ body.dropdown-pinned {
 }
 
 #header-main .svg-inline--fa.fa-w-14 {
-  width: .875em;
+    width: .875em;
 }
 
 #header-main .svg-inline--fa {
-  font-size: inherit;
-  height: 1em;
-  vertical-align: -.125em;
+    font-size: inherit;
+    height: 1em;
+    vertical-align: -.125em;
 }
 
 #header-main .svg-inline--fa.fa-stack-2x {
-  height: 2em;
-  width: 2.5em;
+    height: 2em;
+    width: 2.5em;
 }
 
 #header-main .svg-inline--fa.fa-stack-1x {
-  height: 1em;
-  width: 1.25em;
+    height: 1em;
+    width: 1.25em;
 }
 
 #header-main .svg-inline--fa.fa-stack-1x,
 #header-main .svg-inline--fa.fa-stack-2x {
-  bottom: 0;
-  margin: auto;
-  right: 0;
-  top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    top: 0;
 }
 
 #header-main .navbar-toggler.collapsed .fa-stack {
@@ -635,20 +635,20 @@ body.dropdown-pinned {
 }
 
 #header-main .btn.nav-link {
-  font-weight: normal;
-  border-radius: 0;
-  border: none;
-  width: 100%;
-  text-align: left;
+    font-weight: normal;
+    border-radius: 0;
+    border: none;
+    width: 100%;
+    text-align: left;
 }
 
 #header-main .btn.nav-link:hover,
 #header-main .btn.nav-link:focus {
-  transform: none;
+    transform: none;
 }
 
 #header-main .dropdown-toggle:after {
-  border: none;
+    border: none;
 }
 
 #header-main .dropdown-menu div[class^='col-'] {
@@ -978,12 +978,12 @@ body.dropdown-pinned {
  * lets it retain the scrolling behavior.
  */
 .toolbar-horizontal .fixed-top {
-  top: 80px;
+    top: 80px;
 }
 /* Make sure admin toolbar is always usable above the ASU header */
 #toolbar-administration {
-  position: relative;
-  z-index: 10000;
+    position: relative;
+    z-index: 10000;
 }
 
 #asu-header + div,
@@ -1256,12 +1256,17 @@ Footer - Table of Contents
     font-weight: 700;
 }
 
-#footer-innovation .footer-innovation-links img {
-    height: 100px;
-    width: auto;
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
+#footer-innovation .footer-innovation-links .img-link {
     order: 2;
+    margin-right: 0;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    transform: translate(1.5rem, 0);
+}
+.block-asu-global-footer #footer-innovation .footer-innovation-links .img-link img {
+    height: auto;
+    max-width: 320px;
+    width: auto;
 }
 
 #footer-innovation .footer-innovation-links .nav-link {
@@ -1279,12 +1284,8 @@ Footer - Table of Contents
         flex-direction: column;
         padding-bottom: 1.5rem;
     }
-    #footer-innovation .footer-innovation-links img {
-        width: 100%;
-        height: auto;
-        -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-        order: -1;
+    #footer-innovation .footer-innovation-links .img-link {
+        padding-right: 16px;
     }
     #footer-innovation .footer-innovation-links .nav {
         display: grid;
